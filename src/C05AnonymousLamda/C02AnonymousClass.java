@@ -54,28 +54,29 @@ public class C02AnonymousClass {
         };
         System.out.println(a4.makeSound("강아지", "고양이", 15));
 
-    }
-}
-abstract class AbstractAnimal{
-    abstract void makeSound();
-    void eat(){
-        System.out.println("동물이 먹이를 먹습니다.");
-    }
-}
+            }
+        }
+        abstract class AbstractAnimal{
+            abstract void makeSound();
+            void eat(){
+                System.out.println("동물이 먹이를 먹습니다.");
+            }
+        }
 
-interface Animal1{
-    void makeSound();
-    void eat();
-}
-interface Animal2{
-    void makeSound();
-}
+        interface Animal1{
+            void makeSound();
+            void eat();
+        }
+        interface Animal2{
+            void makeSound();
+        }
+        
+        interface Animal3{
+            String makeSound(String a, String b, String c);
+        }
+        
+        interface Animal4{
+            String makeSound(String a, String b, int c);
+        
+        }
 
-interface Animal3{
-    String makeSound(String a, String b, String c);
-}
-
-interface Animal4{
-    String makeSound(String a, String b, int c);
-
-}
