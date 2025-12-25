@@ -18,9 +18,9 @@ public class C04Json {
     }
 
     static void main(String[] args) throws IOException {
-  // 외부의 json파일을 java의 클래스(객체) 변환 : json 파싱(역직렬화)
+       // 외부의 json파일을 java의 클래스(객체) 변환 : json 파싱(역직렬화)
        Path filePath = Paths.get("src/C07ExceptionFileParsing/myjson1.json");
-   // readString : 문자열전체를 통째로 read
+       // readString : 문자열전체를 통째로 read
        String st1 = Files.readString(filePath);
        System.out.println(st1);
 
@@ -79,4 +79,5 @@ public class C04Json {
    System.out.println(result);
 
 }
+
 
