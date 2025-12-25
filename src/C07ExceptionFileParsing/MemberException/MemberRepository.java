@@ -1,10 +1,10 @@
 package C07ExceptionFileParsing.MemberException;
 
-// 저장소 역할을 하는 역할계층
-// DB의 CRUD를 수행하는 계층
+
 import java.util.ArrayList;
 import java.util.List;
 
+// MemberRepository : 저장소 역할을 하는 역할계층 DB의 CRUD를 수행하는 계층
 public class MemberRepository {
     private List<Member> memberList = new ArrayList<>();
 
@@ -17,17 +17,11 @@ public class MemberRepository {
     }
     public Member findByEmail(String eamil){
     Member member = null;
-//    for(){
-//
-//    }
         return member;
     }
 
     public Member findById(long id){
         Member member = null;
-//        for (){
-//
-//        }
         return member;
     }
 
@@ -36,3 +30,4 @@ public class MemberRepository {
     }
 
 }
+
