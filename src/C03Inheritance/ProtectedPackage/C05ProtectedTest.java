@@ -6,9 +6,10 @@ public class C05ProtectedTest extends C04ProtectedClass{
     static void main(String[] args) {
         C04ProtectedClass c1 = new C05ProtectedTest();
 
-//        System.out.println(c1.st1);//public
-////        System.out.println(c1.st2);//private
-//        System.out.println(c1.st3);//default
-//        System.out.println(c1.st4);//protected
+       System.out.println(c1.st1);//public
+       // System.out.println(c1.st2);//private
+       System.out.println(c1.st3);//default
+       System.out.println(c1.st4);//protected
     }
 }
+
