@@ -3,13 +3,13 @@ package C07ExceptionFileParsing.MemberException;
 import java.util.List;
 import java.util.Optional;
 
-// 핵심로직을 구현하는 계층
-public class MemberService {
-    private MemberRepository memberRepository;
+    // 핵심로직을 구현하는 계층
+    public class MemberService {
+        private MemberRepository memberRepository;
 
-    public MemberService() {
-        MemberRepository memberRepository = new MemberRepository();
-    }
+        public MemberService() {
+            MemberRepository memberRepository = new MemberRepository();
+        }
 
 
     public void register(String name, String email, String password) {
@@ -52,3 +52,4 @@ public class MemberService {
     }
 
 }
+
