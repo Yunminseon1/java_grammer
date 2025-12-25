@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class C01ExceptionBasic {
     static void main(String[] args) {
         
-//        예외처리 기본 : 예외가 발생할것으로 예상되는 코드를 try로 감싼다
-//        예외처리 목적 : 1) 사용자에게 적절한 에러 메시지 전달  2) 예외발생시 디버깅을  위한 로그기록
+       // 예외처리 기본 : 예외가 발생할것으로 예상되는 코드를 try로 감싼다
+       // 예외처리 목적 : 1) 사용자에게 적절한 에러 메시지 전달  2) 예외발생시 디버깅을  위한 로그기록
         
         System.out.println("나눗셈 프로그램입니다.");
         Scanner sc = new Scanner(System.in);
@@ -37,4 +37,5 @@ public class C01ExceptionBasic {
     }
 
 }
+
 
