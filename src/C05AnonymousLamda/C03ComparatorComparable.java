@@ -18,12 +18,9 @@ public class C03ComparatorComparable {
        myList.add(10);
        myList.add(30);
 
-       // java의 대부분의 정렬함수는 매개변수로 Comparator객체 요구
-        myList.sort(Comparator.naturalOrder());
-        
-       // o1과 o2의 숫자값을 마이너스 형식으로 코딩을 하되,
-       // o1이 먼저 있으면 오름차순. o2가 먼저 있으면 내림차순.
-        myList.sort((o1, o2) -> o1-o2);
+       
+        myList.sort(Comparator.naturalOrder()); // java의 대부분의 정렬함수는 매개변수로 Comparator객체 요구
+        myList.sort((o1, o2) -> o1-o2); // o1과 o2의 숫자값을 마이너스 형식으로 코딩을 하되, o1이 먼저 있으면 오름차순. o2가 먼저 있으면 내림차순
 
         List<String> myList2 = new ArrayList<>();
         myList2.add("java");
@@ -44,18 +41,18 @@ public class C03ComparatorComparable {
         });
         System.out.println(myList2);
 
-       // 백준 : 단어정렬
-       //  1. 단어 입력(스캐너)
-       //  2. 요구사항(1.길이 순 2. 사전순), 중복단어 제거
-       //  3. 단어 출력(sout)
-       //  요구사항에 맞게 정렬하는 함수를 모르겠다
-
-       //     Scanner sc = new Scanner(System.in);
-       //     String N;
-       //     for (int i =0; i<N; N++){
-       //         s
-       //     }
-       //     System.out.println();
+           // 백준 : 단어정렬
+           //  1. 단어 입력(스캐너)
+           //  2. 요구사항(1.길이 순 2. 사전순), 중복단어 제거
+           //  3. 단어 출력(sout)
+           //  요구사항에 맞게 정렬하는 함수를 모르겠다
+    
+           //     Scanner sc = new Scanner(System.in);
+           //     String N;
+           //     for (int i =0; i<N; N++){
+           //         s
+           //     }
+           //     System.out.println();
 
        // 배열, 리스트 정렬외에 java의 그외 정렬자료구조
        Queue<String> pq = new PriorityQueue<>((o1, o2) -> o1.length()-o2.length());
@@ -115,7 +112,7 @@ public class C03ComparatorComparable {
         // getter, toString
         // 2. student 객체 List에 4개 담기
 
-        // Student 객체를 담을 리스트
+        // Student 객체를 담을 리스트 생성 
         List<Student> studentList = new ArrayList<>();
         
         // 객체 4개 생성 후 리스트에 추가
@@ -129,7 +126,7 @@ public class C03ComparatorComparable {
            public int compare(Student o1, Student o2) {
                return o1.getName().CompareTo(o2.getName);
            }
-        // 출력
+        // 값 출력
         for (Student s : studentList) {
             System.out.println(s);
         }
@@ -159,7 +156,7 @@ public class C03ComparatorComparable {
                }
 
                // toString
-               // Comparable의 compareTo에서는 this와 매개변수로 주어지는 객체와 비교한다.
+               // Comparable의 compareTo에서는 this와 매개변수로 주어지는 객체와 비교
                // this가 앞에 있으면 오름차순. 매개변수객체가 앞에있으면 내림차순
                @Override
                public String toString() {
@@ -178,3 +175,4 @@ public class C03ComparatorComparable {
     }
 
 }
+
