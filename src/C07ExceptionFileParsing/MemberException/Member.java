@@ -1,6 +1,7 @@
 package C07ExceptionFileParsing.MemberException;
 
 // 객체 - 엔티티
+// 맴버 클래스(Member)
 public class Member{
     private String name;
     private String email;
@@ -36,4 +37,5 @@ public class Member{
                 ", id=" + id +
                 '}';
     }
+
 }
