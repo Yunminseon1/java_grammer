@@ -3,7 +3,7 @@ package C07ExceptionFileParsing.MemberException;
 import java.util.List;
 import java.util.Scanner;
 
-// 사용자와 인터페이싱(입출력)하는 계층
+// MemberController : 사용자와 인터페이싱(입출력)하는 계층
 public class MemberController {
     public static void main(String[] args) {
 
@@ -69,4 +69,5 @@ public class MemberController {
        }
     }
 }
+
 
