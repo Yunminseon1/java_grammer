@@ -5,7 +5,8 @@ public class C05ProtectedTest {
         C04ProtectedClass c1 = new C04ProtectedClass();
 
         System.out.println(c1.st1);//public
-//        System.out.println(c1.st2); //private
+       // System.out.println(c1.st2); //private
         System.out.println(c1.st4);//protected
     }
 }
+
