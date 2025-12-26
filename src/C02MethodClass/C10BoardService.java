@@ -68,7 +68,7 @@ public class C10BoardService {
                 String contents = sc.nextLine();
                 System.out.print("회원EMAIL을 입력해주세요");
                 String email = sc.nextLine();
-//                회원검색
+               // 회원검색
                 Author author = null;
                 for (Author a : authorList){
                     if(a.getEmail().equals(email)){
@@ -78,7 +78,7 @@ public class C10BoardService {
                 }
                 Post post = new Post(title,contents,author);
                 postList.add(post);
-//                author.getPostList().add(post);
+               // author.getPostList().add(post);
             }else if (number==5){
                 System.out.println("게시글목록조회서비스입니다.");
                 for (Post p : postList){
@@ -95,13 +95,13 @@ public class C10BoardService {
                         break;
                     }
                 }
-//                Author author = null;
-//                for (Author a  : authorList){
-//                    if(post.getAuthorEmail().equals(a.getEmail())){
-//                        author =a;
-//                        break;
-//                    }
-//                }
+               // Author author = null;
+               // for (Author a  : authorList){
+                   // if(post.getAuthorEmail().equals(a.getEmail())){
+                       // author =a;
+                       // break;
+                   // }
+               // }
                 System.out.println(" id : " + post.getId() + " title : " + post.getId() + " contents : " + post.getContents() + " 작성자이름 : " + post.getAuthor().getName());
             }
         }
@@ -177,4 +177,5 @@ public class C10BoardService {
             public Author getAuthor() {
                 return this.author;
             }
+
         }
