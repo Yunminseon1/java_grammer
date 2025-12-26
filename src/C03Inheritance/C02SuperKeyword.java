@@ -6,7 +6,7 @@ public class C02SuperKeyword extends SuperParents {
     int a = 20;
 
     public C02SuperKeyword() {
-//        super() : 부모클래스의 생성자를 호출하는 클래스
+       // super() : 부모클래스의 생성자를 호출하는 클래스
         super(10);
         this.a = 20;
     }
@@ -18,7 +18,7 @@ public class C02SuperKeyword extends SuperParents {
 
     public void display() {
         System.out.println("자식의 변수 : " + this.a);
-//        부모의 변수나 메서드에 접근할떄는 super키워드를 사용
+       // 부모의 변수나 메서드에 접근할떄는 super키워드를 사용
         System.out.println("부모의 변수 : " + super.a);
     }
 }
@@ -30,3 +30,4 @@ class SuperParents {
         this.a = a;
     }
 }
+
