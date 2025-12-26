@@ -8,7 +8,7 @@ public class C00HelloWorld {
 
     public static void main(String[] args) {
 //      1) main메서드는 java파일 실행시 실행의 시작점이자, 가장먼저 실행되는 메서드
-//      2) public static void : 어디서든 접근 간능하고, 반환(리턴) 값이 없는 메서드
+//      2) public static void : 어디서든 접근 가능하고, 반환(리턴) 값이 없는 메서드
 //      3) 메서드명, 변수명은 일반적으로 알파벳 소문자로 시작
 
         // 출력 예시 : sout
@@ -79,3 +79,4 @@ public class C00HelloWorld {
 
 
 }
+
