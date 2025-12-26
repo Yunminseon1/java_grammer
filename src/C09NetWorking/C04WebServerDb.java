@@ -12,8 +12,8 @@ import java.sql.*;
 
 public class C04WebServerDb {
     public static void main(String[] args) throws IOException, SQLException {
-//                사용자 : 크롬을 통해 http://localhost:8080?id=1 요청 get요청
-//                서버 : DB에서 조회한 결과값을  문자열형식으로 응답 1)일반문자열 2)json
+               // 사용자 : 크롬을 통해 http://localhost:8080?id=1 요청 get요청
+               // 서버 : DB에서 조회한 결과값을  문자열형식으로 응답 1)일반문자열 2)json
         ServerSocket serverSocket = new ServerSocket(8080);
 
         String url = "jdbc:mysql://localhost:3306/board?useSSL=false";
@@ -28,7 +28,7 @@ public class C04WebServerDb {
             Socket socket = serverSocket.accept();
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             StringBuffer sb = new StringBuffer();
-//            소켓안에 사용자의 요청정보가 담겨있는데 이제 까보겠다.
+           // 소켓안에 사용자의 요청정보가 담겨있는데 이제 까보겠다.
             String line = br.readLine();
             while(line != null && !line.isEmpty()){
                 sb.append(line);
@@ -81,3 +81,4 @@ public class C04WebServerDb {
 
     }
 }
+
