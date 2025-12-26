@@ -25,7 +25,7 @@ public class C09BankService {
             Scanner sc = new Scanner(System.in);
             int number = Integer.parseInt(sc.nextLine());
             if(number==1){
-//                계좌개설
+               // 계좌개설
                 System.out.println("1. 계좌 개설입니다. 아래 정보를 입력해주세요.");
                 System.out.println("이름, 계좌번호, 잔액을 입력");
                 String name = sc.nextLine();
@@ -37,7 +37,7 @@ public class C09BankService {
                     bankAccountMap.put(accountNumber, new BankAccount(name, accountNumber, balance));
                 }
             }else if (number==2){
-//                계좌조회
+               // 계좌조회
                 System.out.print("2. 계좌조회서비스입니다.계좌번호를 입력해주세요. : ");
                 String accountNumber = sc.nextLine();
                 BankAccount b1 = bankAccountMap.get(accountNumber);
@@ -142,4 +142,5 @@ class BankAccount{
                 ", balance=" + balance +
                 '}';
     }
+
 }
