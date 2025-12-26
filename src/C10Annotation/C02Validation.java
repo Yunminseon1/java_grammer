@@ -19,14 +19,14 @@ public class C02Validation {
             String email = sc.nextLine();
             Member member = new Member(name,email);
 
-//            추후 스프링에서는 아래와 같은 "validate메서드 + 직접만든 어노테이션"이 모두 합쳐져있는 어노테이션을 사용
+           // 추후 스프링에서는 아래와 같은 "validate메서드 + 직접만든 어노테이션"이 모두 합쳐져있는 어노테이션을 사용
             validate(member);
             memberList.add(member);
         }
     }
-//        특정 변수에 NotEmpty 어노테이션 설정이 있을경우, 값이 비어있는지를 검사하는 메서드.
+       // 특정 변수에 NotEmpty 어노테이션 설정이 있을경우, 값이 비어있는지를 검사하는 메서드.
     static void validate(Object object) throws IllegalAccessException {
-//       리플렉션 기술을 통해 런타임시점에 private변수라 할지라도 객체 안의 필드값을 꺼내 확인 할수 있음
+      // 리플렉션 기술을 통해 런타임시점에 private변수라 할지라도 객체 안의 필드값을 꺼내 확인 할수 있음
         Field[] fieldList = object.getClass().getDeclaredFields();
         for (Field f : fieldList){
             if(f.isAnnotationPresent(NotEmpty.class)){
@@ -58,4 +58,5 @@ class Member{
 @interface NotEmpty{
     //    어노테이션 클래스의 속성은 일반적으로 메서드 형태로 정의
     String message() default "this field cannot be empty!!";
+
 }
