@@ -12,8 +12,8 @@ import java.sql.*;
 
 public class C04WebServerDb {
     public static void main(String[] args) throws IOException, SQLException {
-               // 사용자 : 크롬을 통해 http://localhost:8080?id=1 요청 get요청
-               // 서버 : DB에서 조회한 결과값을  문자열형식으로 응답 1)일반문자열 2)json
+        // 사용자 : 크롬을 통해 http://localhost:8080?id=1 요청 get요청
+        // 서버 : DB에서 조회한 결과값을  문자열형식으로 응답 1)일반문자열 2)json
         ServerSocket serverSocket = new ServerSocket(8080);
 
         String url = "jdbc:mysql://localhost:3306/board?useSSL=false";
@@ -28,7 +28,7 @@ public class C04WebServerDb {
             Socket socket = serverSocket.accept();
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             StringBuffer sb = new StringBuffer();
-           // 소켓안에 사용자의 요청정보가 담겨있는데 이제 까보겠다.
+            // 소켓안에 사용자의 요청정보가 담겨있는데 이제 까보겠다.
             String line = br.readLine();
             while(line != null && !line.isEmpty()){
                 sb.append(line);
@@ -43,7 +43,7 @@ public class C04WebServerDb {
                 id = infos.split("=")[1];
             }
 
-            ResultSet result = st.executeQuery("select * from post2 where id=" +"\'"+ id +"\'");//(안중요)jdbc안의 return값이 java.sql안의 ResultSet이라는 객체에 담겨옴
+            ResultSet result = st.executeQuery("select * from post2 where id=" +"\'"+ id +"\'"); //(안중요)jdbc안의 return값이 java.sql안의 ResultSet이라는 객체에 담겨옴
 
 //            while(result.next()){
 //                response += ("id : " + result.getInt("id"));
@@ -54,8 +54,8 @@ public class C04WebServerDb {
 //                System.out.println(result.getString("contents"));
 //            }
 
-            //사용자의 요청 1.get 2.id
-            //System.out.println(requestString);                              // 동적코딩
+            // 사용자의 요청 1.get 2.id
+            // System.out.println(requestString);                              // 동적코딩
             ObjectMapper objectMapper = new ObjectMapper();
             String response = "HTTP/1.1 200 OK\r\n"
                     +"Content-Type: application/json; charset=utf-8" + "\r\n\r\n" + ;
@@ -78,7 +78,7 @@ public class C04WebServerDb {
             this.contents = contents;
         }
 
-            public long getId() {
+    public long getId() {
         return id;
     }
 
@@ -97,9 +97,5 @@ public class C04WebServerDb {
                 ", title='" + title + '\'' +
                 ", contents='" + contents + '\'' +
                 '}';
-
-
     }
 }
-
-
