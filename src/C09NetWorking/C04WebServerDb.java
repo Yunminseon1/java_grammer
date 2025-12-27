@@ -67,18 +67,39 @@ public class C04WebServerDb {
 
 
         class Post{
-            private int id;
+            private long id;
             private String title;
             private String content;
         }
 
-        class Post1{
-            private int id1;
-            private String title1;
-            private String content1;
+        public Post(long id, String title, String contents){
+            this.id = id;
+            this.title = title;
+            this.contents = contents;
         }
+
+            public long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getContents() {
+        return contents;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", contents='" + contents + '\'' +
+                '}';
 
 
     }
 }
+
 
