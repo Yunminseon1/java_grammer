@@ -9,7 +9,7 @@ public class C01WebServerGet {
     static void main(String[] args) throws IOException {
         // 사용자 : 크롬을 통해 http://서버url 요청 get 요청(http 요청 문서조립 필요)
         // 서버 : "hello world java" 문자열을 응답 (http 응답 문서조립 필요)
-        // 소켓이란 서버와 사용자가 통신을 하기 위한 네트워크통신의 끝점을 나타내는 개념
+        // 소켓 : 서버와 사용자가 통신을 하기 위한 네트워크통신의 끝점을 나타내는 개념
         ServerSocket serverSocket = new ServerSocket(8081);
         System.out.println("서버시작 ");
         while(true){
@@ -28,5 +28,6 @@ public class C01WebServerGet {
         }
     }
 }
+
 
 
