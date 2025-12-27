@@ -10,8 +10,8 @@ import java.sql.Struct;
 
 public class C02WebServerGet {
     static void main(String[] args) throws IOException {
-       // 사용자 : 크롬을 통해 http://localhost:8081?id=1 get 요청(http 요청 문서조립 필요)
-       // 서버 : "hello world java + id" 문자열을 응답 (http 응답 문서조립 필요)
+        // 사용자 : 크롬을 통해 http://localhost:8081?id=1 get 요청(http 요청 문서조립 필요)
+        // 서버 : "hello world java + id" 문자열을 응답 (http 응답 문서조립 필요)
 
         ServerSocket serverSocket = new ServerSocket(8081);
         System.out.println("서버시작 ");
@@ -45,4 +45,5 @@ public class C02WebServerGet {
         }
     }
 }
+
 
