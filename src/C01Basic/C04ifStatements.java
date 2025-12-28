@@ -17,7 +17,7 @@ public class C04ifStatements {
 
         // 교통카드 예제
         System.out.println("현재 가지고 있는 돈은 얼마인가요?");
-        사용자가 가지고있는 돈을 int로 입력받는다.
+        // 사용자가 가지고있는 돈을 int로 입력받는다.
         10000이상이면 택시를 타시오 출력
         10000미만~3000원 이상이면 버스를 타시오 출력
         3000원 미만이면 걸어기시오 출력
@@ -55,9 +55,9 @@ public class C04ifStatements {
        String result = answer.equals(input)? "문이 열렸습니다." : "비밀번호가 틀렸습니다";
        System.out.println(result);
 
-     switch 문 : if, else if, else if 등 여러조건식이 있을때 가독성있게 함
-     input과 case의 값들은 equal관계이고 구문마다 반드시 break를 넣어줘야함
-     default는 그외의 의미로서 else와 같은 의미
+       // switch 문 : if, else if, else if 등 여러조건식이 있을때 가독성있게 함
+       // input과 case의 값들은 equal관계이고 구문마다 반드시 break를 넣어줘야함
+       // default는 그외의 의미로서 else와 같은 의미
 
        Scanner sc = new Scanner(System.in);
        int input = Integer.parseInt(sc.nextLine());
@@ -77,3 +77,4 @@ public class C04ifStatements {
        }
     }
 }
+
